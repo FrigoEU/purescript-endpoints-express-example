@@ -2,8 +2,10 @@ module EndpointExample.Model where
 
 import Prelude (class Show, Unit)
 
-import Data.Argonaut.Encode (class EncodeJson, gEncodeJson)
-import Data.Argonaut.Decode (class DecodeJson, gDecodeJson)
+import Data.Argonaut.Encode (class EncodeJson)
+import Data.Argonaut.Decode (class DecodeJson)
+import Data.Argonaut.Encode.Generic (gEncodeJson)
+import Data.Argonaut.Decode.Generic (gDecodeJson)
 import Data.Generic (class Generic, gShow)
 import Data.Endpoint (Endpoint(Endpoint))
 import Data.HTTP.Method (Method(GET))
