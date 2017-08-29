@@ -1,6 +1,7 @@
 {
   "name": "purescript-endpoints-express-example",
   "dependencies": {
-    "purescript-endpoints-express": "latest"
+    "purescript-endpoints-express": "latest",
+    "purescript-argonaut-generic":  "latest"
   }
 }

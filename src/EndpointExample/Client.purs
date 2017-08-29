@@ -1,8 +1,8 @@
 module EndpointExample.Client where
 
-import Prelude (Unit, unit, pure, show, (<>), ($), bind, void)
+import Prelude (Unit, unit, pure, show, (<>), ($), bind, void, discard)
 
-import Control.Monad.Eff (Eff)
+import Control.Monad.Eff (Eff, kind Effect)
 import Control.Monad.Eff.Class (liftEff)
 import Control.Monad.Eff.Exception (message)
 import Control.Monad.Aff (runAff)
@@ -14,7 +14,7 @@ import EndpointExample.Model (getOrdersEndpoint)
 
 ----------------------------
 
-foreign import data DOM :: !
+foreign import data DOM :: Effect
 foreign import appendToBody :: forall eff. String -> Eff (dom :: DOM | eff) Unit
 
 main :: forall eff. Eff ( dom :: DOM , ajax :: AJAX | eff ) Unit
